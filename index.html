@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Implementation</title>
+    <!-- Basic CSS for better presentation -->
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0 auto; 
+            max-width: 1200px; 
+            padding: 20px;
+        }
+        header, main, footer {
+            text-align: center;
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin: 20px auto;
+        }
+        th, td { 
+            border: 1px solid black; 
+            padding: 8px; 
+            text-align: left; 
+        }
+        form { 
+            max-width: 500px; 
+            margin: 20px auto; 
+            text-align: left;
+        }
+        section {
+            margin: 20px 0;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        audio, video {
+            display: block;
+            margin: 10px auto;
+        }
+        /* Specific styling for centered ordered list with Roman numerals */
+        ol {
+            display: inline-block; /* Centers the entire list */
+            text-align: left;     /* Keeps list items left-aligned within the block */
+            padding-left: 0;      /* Removes default padding */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ol li {
+            margin-left: 2em;     /* Adds space for the Roman numerals */
+        }
+        </style>
+</head>
+<body>
+    
+    <header>
+        <h1>HTML5</h1>
+    </header>
+      <main>
+        <section>
+            <h2>Key Features</h2>
+            <ol type="I">
+                <li>HTML5 Semantic Structure</li>
+                <li>Multimedia Elements</li>
+                <li>Form Validation</li>
+                <li>Responsive Design</li>
+                <li>External Resources</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Featured Image</h2>
+            <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" 
+                 alt="Nature landscape" 
+                 width="500" 
+                 height="300">
+            <p>Image from Pexels.com</p>
+        </section>
+
+        <section>
+            <h2>Contact List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Must Go</td>
+                        <td>123 Sugoi</td>
+                        <td>555-0123</td>
+                        <td>mustgo@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>William Kaongo</td>
+                        <td>001 Statehouse Ave</td>
+                        <td>555-0124</td>
+                        <td>williamkaongo@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Kasongo Yieye</td>
+                        <td>789 Eldoret Rd</td>
+                        <td>555-0125</td>
+                        <td>Kasongoyeiye@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Elchapo Kenya</td>
+                        <td>321 Nairobi St</td>
+                        <td>555-0126</td>
+                        <td>elchapo@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Kenya One</td>
+                        <td>001 Statehouse Road</td>
+                        <td>555-0127</td>
+                        <td>kenyaone@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="POST">
+                <!-- Text Input -->
+                <label for="name">Full Name*:</label><br>
+                <input type="text" 
+                       id="name" 
+                       name="name" 
+                       placeholder="Enter your name" 
+                       required><br>
+
+                <!-- Email Input -->
+                <label for="email">Email*:</label><br>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       placeholder="example@domain.com" 
+                       required><br>
+
+                <!-- Password Input -->
+                <label for="password">Password*:</label><br>
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       placeholder="Enter password" 
+                       minlength="8" 
+                       required><br>
+
+                <!-- Date Input -->
+                <label for="birthdate">Birth Date:</label><br>
+                <input type="date" 
+                       id="birthdate" 
+                       name="birthdate"><br>
+
+                <!-- Dropdown -->
+                <label for="country">Country:</label><br>
+                <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select><br>
+
+                <!-- Radio Buttons -->
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br>
+
+                <!-- Checkboxes -->
+                <p>Interests:</p>
+                <input type="checkbox" id="tech" name="interests" value="tech">
+                <label for="tech">Technology</label>
+                <input type="checkbox" id="sports" name="interests" value="sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests" value="music">
+                <label for="music">Music</label><br>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+        <!-- Multimedia Elements -->
+        <section>
+            <h2>Multimedia Demo</h2>
+            <!-- Audio Element -->
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Video Element -->
+            <video width="320" height="240" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HTML5 Demo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
